@@ -1,0 +1,44 @@
+The ``add_integer`` module
+======================
+
+Using ``addition``
+------------------
+
+This module defines the integer addition function ``add_integer(a, b=98).``
+
+The add_integer function return the result of addition of two arguments.
+
+::
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(1, 1)
+    2
+
+::
+
+    >>> add_integer(1, -1)
+    0
+
+The function cast float into integers values.
+
+::
+
+    >> add_integer(2.5, 3.0)
+    5
+
+::
+
+The function raises a TypeError if the user didn't insert an integer or float number.
+
+::
+
+    >>> add_integer("Yo!", 1)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+
+    >>> add_ineteger(1, "Yo!")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
