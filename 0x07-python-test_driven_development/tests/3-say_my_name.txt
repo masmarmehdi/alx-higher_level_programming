@@ -1,0 +1,37 @@
+The ``say_my_name`` module
+==========================
+
+Using ``Print full name``
+-------------------------
+
+This module defines the printing of the first name and the last name ``say_my_name(first_name, last_name="").``
+
+The say_my_name function return the full name printed.
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+::
+
+The function raises a TypeError if either of the firstname or last name aren't strings.
+
+    >>> say_my_name(14, "Masmar")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name("Mehdi", 14)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+The function doesn't require to enter the last name, it is indeed depends on the user
+
+    >>> say_my_name("Mehdi")
+    My name is Mehdi 
+
