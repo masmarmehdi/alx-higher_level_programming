@@ -1,0 +1,30 @@
+``text_indentation`` module
+===========================
+
+Using ``text indentation``
+--------------------------
+
+This module defines the printing of a text with 2 new lines after each of these characters: . ? and : ``text_indentation(text)``
+
+The function text_indentation doesn't return anything but it indeed print the text as required above.
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Hello world. My name is: Mehdi Masmar")
+    Hello world.
+    <BLANKLINE>
+    My name is:
+    <BLANKLINE>
+    Mehdi Masmar
+
+::
+
+The function raises an error if the text is not a string
+
+::
+
+    >>> text_indentation(14)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
