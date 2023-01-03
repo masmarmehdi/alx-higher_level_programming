@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Defines a rectangle class"""
 
 
@@ -40,7 +41,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    
+
     def area(self):
         """Calculates the area of the rectangle"""
         return (self.__height * self.__width)
@@ -53,7 +54,7 @@ class Rectangle:
 
     def __str__(self):
         """Return a string representation of the rectangle"""
-        if self.__width == 0 or self.__height ==0:
+        if self.__width == 0 or self.__height == 0:
             return ("")
         rectangle = []
         for i in range(self.__height):
