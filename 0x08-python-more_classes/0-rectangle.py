@@ -2,6 +2,7 @@
 
 """Defines a rectangle class"""
 
+
 class Rectangle:
     """Rectangle class"""
     pass
