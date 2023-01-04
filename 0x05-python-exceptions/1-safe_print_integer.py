@@ -2,7 +2,7 @@
 
 def safe_print_integer(value):
     """Function to print integers with format
-    
+
     Args:
         value (any): the value used
 
