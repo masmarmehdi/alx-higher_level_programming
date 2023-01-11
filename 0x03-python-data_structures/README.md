@@ -1,6 +1,6 @@
 ## 0x03-python-data_structures
 
-This directory contains the python introduction, as well as the steps to run a python file from cmd.
+This directory contains the python data structures: lists and tuples.
 
 ## Content of the directory
 [0-print_list_integer.py](https://github.com/masmarmehdi/alx-higher_level_programming/blob/master/0x03-python-data_structures/0-print_list_integer.py) : a function that prints all integers of a list.<br>
