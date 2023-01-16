@@ -58,7 +58,7 @@ class Base:
         if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """
@@ -68,6 +68,19 @@ class Base:
             **dictionary (dict): key/value pair of the attributes
         """
         if cls.__name__ == "Rectangle":
-            rectangle = cls(3, 5, 1)
-        rectangle.update(**dictionary)
-        return rectangle
+            new_instance = cls(3, 5, 1)
+        else:
+            new_instance = cls(1)
+        new_instance.update(**dictionary)
+        return new_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """"""
+        filename = "{}.json".format(cls.__name__)
+        try:
+            with open(filename, 'r') as f:
+                list_dicts = Base.from_json_string(f.read())
+                return [cls.create(**i) for i in list_dicts]
+        except IOError:
+            return []
