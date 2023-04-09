@@ -17,7 +17,9 @@ if __name__ == '__main__':
     states ON states.id=cities.state_id WHERE states.name=%s\
     ", (sys.argv[4],))
     rows = cursor.fetchall()
+    result = []
     for row in rows:
-        print(row)
+        result.append(row[0])
+    print(*result, sep=", ")
     cursor.close()
     db.close()
